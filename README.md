@@ -1,140 +1,140 @@
 # SharkwClient
 
-**Open-source Minecraft 1.8.9 Forge mod** for PvP enhancement and server security auditing.
+**Mod open-source de Minecraft 1.8.9 Forge** para mejora de PvP y auditoría de seguridad en servidores.
 
-SharkwClient is a feature-rich client mod built on Forge + SpongeMixin, designed for testing anticheat systems on private servers. It includes 38 configurable modules across combat, movement, visual, and utility categories.
-
----
-
-## Features
-
-### Combat (10 modules)
-| Module | Description |
-|--------|-------------|
-| KillAura | Silent aura with smooth rotations and GCD fix |
-| AimAssist | Frame-independent smooth aim correction |
-| AutoClicker | Gaussian-distributed CPS autoclicker |
-| Criticals | Packet criticals on every hit |
-| Velocity | Cancel or reduce knockback (packet-level) |
-| Reach | Extended attack range with proper raycasting |
-| WTap | Automatic sprint reset for max knockback |
-| Strafe | Combat strafing automation |
-| AutoArmor | Automatic best armor equipping |
-| Backtrack | Delayed entity positions for extended hit window |
-
-### Movement (11 modules)
-| Module | Description |
-|--------|-------------|
-| Speed | Sprint / SlowHop / GroundStrafe modes |
-| Fly | Vanilla and Glide modes with anti-kick |
-| Sprint | Auto-sprint with omni-directional option |
-| Scaffold | Auto bridge with silent rotations |
-| NoFall | Fall damage prevention |
-| Bhop | Bunny hop with speed boost |
-| Jesus | Walk on water |
-| NoSlow | Cancel item use slowdown |
-| Step | Step up blocks without jumping |
-| Phase | Noclip through blocks |
-| AirJump | Multiple jumps in the air |
-
-### Visual (7 modules)
-| Module | Description |
-|--------|-------------|
-| ESP | Player/mob boxes through walls |
-| Tracers | Lines to entities |
-| Fullbright | Maximum visibility |
-| XRay | See ores through blocks |
-| TargetHUD | Target health display |
-| KeyStrokes | Input display with CPS |
-| HUD | Module list, watermark, info |
-
-### Misc (10 modules)
-| Module | Description |
-|--------|-------------|
-| Timer | Game speed modification |
-| Blink | Packet buffering (real packet interception) |
-| AntiAFK | Anti-idle with configurable modes |
-| AutoEat | Automatic eating when hungry |
-| AutoRespawn | Instant respawn on death |
-| FreeCam | Free camera movement |
-| FlagDetector | Anticheat detection monitor |
-| FastBreak | Faster block breaking |
-| FastPlace | Faster block placement |
-
-### Technical Features
-- **GCD Fix** — Rotations calibrated to mouse hardware sensitivity
-- **Gaussian CPS** — Statistically human click patterns
-- **Silent Rotations** — Server-side rotation via packets
-- **Mixin Injection** — Direct hooks into NetworkManager, Block rendering, and more
-- **Full Settings System** — Every module has configurable sliders, toggles, and modes
-- **Premium Dark GUI** — Full-screen ClickGUI with animated toggles, sliders, and keybind support
+SharkwClient es un cliente con muchas funciones construido sobre Forge + SpongeMixin, diseñado para testear sistemas anticheat en servidores privados. Incluye 38 módulos configurables en las categorías de combate, movimiento, visual y utilidades.
 
 ---
 
-## Download & Install
+## Características
 
-### Requirements
+### Combate (10 módulos)
+| Módulo | Descripción |
+|--------|-------------|
+| KillAura | Aura silenciosa con rotaciones suaves y GCD fix |
+| AimAssist | Corrección de apuntado suave e independiente del framerate |
+| AutoClicker | Autoclicker con distribución gaussiana de CPS |
+| Criticals | Críticos por packet en cada golpe |
+| Velocity | Cancela o reduce el knockback (a nivel de packet) |
+| Reach | Alcance de ataque extendido con raycasting |
+| WTap | Reset de sprint automático para máximo knockback |
+| Strafe | Automatización de strafe en combate |
+| AutoArmor | Equipado automático de la mejor armadura |
+| Backtrack | Posiciones retrasadas de entidades para más ventana de hit |
+
+### Movimiento (11 módulos)
+| Módulo | Descripción |
+|--------|-------------|
+| Speed | Modos Sprint / SlowHop / GroundStrafe |
+| Fly | Modos Vanilla y Glide con anti-kick |
+| Sprint | Auto-sprint con opción omnidireccional |
+| Scaffold | Auto bridge con rotaciones silenciosas |
+| NoFall | Prevención de daño por caída |
+| Bhop | Bunny hop con boost de velocidad |
+| Jesus | Caminar sobre el agua |
+| NoSlow | Cancela la ralentización por uso de items |
+| Step | Subir bloques sin saltar |
+| Phase | Noclip a través de bloques |
+| AirJump | Saltos múltiples en el aire |
+
+### Visual (7 módulos)
+| Módulo | Descripción |
+|--------|-------------|
+| ESP | Cajas de jugadores/mobs a través de paredes |
+| Tracers | Líneas hacia entidades |
+| Fullbright | Visibilidad máxima |
+| XRay | Ver minerales a través de bloques |
+| TargetHUD | Muestra la vida del objetivo |
+| KeyStrokes | Visualización de inputs con CPS |
+| HUD | Lista de módulos, watermark, info |
+
+### Misc (10 módulos)
+| Módulo | Descripción |
+|--------|-------------|
+| Timer | Modificación de velocidad del juego |
+| Blink | Buffering de packets (intercepción real) |
+| AntiAFK | Anti-inactividad con modos configurables |
+| AutoEat | Comer automáticamente cuando hay hambre |
+| AutoRespawn | Respawn instantáneo al morir |
+| FreeCam | Movimiento libre de cámara |
+| FlagDetector | Monitor de detecciones del anticheat |
+| FastBreak | Romper bloques más rápido |
+| FastPlace | Colocar bloques más rápido |
+
+### Características Técnicas
+- **GCD Fix** — Rotaciones calibradas a la sensibilidad del hardware del mouse
+- **CPS Gaussiano** — Patrones de clicks estadísticamente humanos
+- **Rotaciones Silenciosas** — Rotación server-side vía packets
+- **Inyección Mixin** — Hooks directos en NetworkManager, renderizado de bloques y más
+- **Sistema de Settings Completo** — Cada módulo tiene sliders, toggles y modos configurables
+- **GUI Dark Premium** — ClickGUI fullscreen con toggles animados, sliders y soporte de keybinds
+
+---
+
+## Descargar e Instalar
+
+### Requisitos
 - Minecraft 1.8.9
-- [Forge 1.8.9](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.8.9.html) installed
+- [Forge 1.8.9](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.8.9.html) instalado
 - Java 8
 
-### Option 1: Download Pre-built JAR
-1. Go to the [**Releases**](../../releases) page
-2. Download the latest `SharkwClient-1.0.jar`
-3. Place it in your `.minecraft/mods/` folder
-4. Launch Minecraft with Forge 1.8.9
-5. Press **RIGHT SHIFT** to open the GUI
+### Opción 1: Descargar el JAR compilado
+1. Ve a la página de [**Releases**](../../releases)
+2. Descarga el último `SharkwClient-1.0.jar`
+3. Ponlo en tu carpeta `.minecraft/mods/`
+4. Abre Minecraft con Forge 1.8.9
+5. Presiona **RIGHT SHIFT** para abrir el GUI
 
-### Option 2: Build from Source
+### Opción 2: Compilar desde el código fuente
 ```bash
-# Clone the repository
+# Clonar el repositorio
 git clone https://github.com/SaaSyEng/SharkwClient.git
 cd SharkwClient
 
-# Setup workspace (first time only, ~15 min)
+# Configurar workspace (solo la primera vez, ~15 min)
 # Windows:
 gradlew.bat setupDecompWorkspace
 
-# Build
+# Compilar
 gradlew.bat build
 ```
 
-The compiled JAR will be at `build/libs/SharkwClient-1.0.jar`. Copy it to your `.minecraft/mods/` folder.
+El JAR compilado estará en `build/libs/SharkwClient-1.0.jar`. Cópialo a tu carpeta `.minecraft/mods/`.
 
-### Quick Start
-1. Install Forge 1.8.9 in your Minecraft launcher
-2. Drop the JAR into `.minecraft/mods/`
-3. Launch Minecraft with Forge 1.8.9
-4. Press **RIGHT SHIFT** in-game to open the ClickGUI
-5. Click modules to toggle, expand for settings
-6. Right-click a module to assign a keybind
-
----
-
-## Controls
-
-| Key | Action |
-|-----|--------|
-| RIGHT SHIFT | Open/Close ClickGUI |
-| Right-click module | Set keybind |
-| Mouse wheel | Scroll module list |
-| ESC | Close GUI |
+### Inicio Rápido
+1. Instala Forge 1.8.9 en tu launcher de Minecraft
+2. Mete el JAR en `.minecraft/mods/`
+3. Abre Minecraft con Forge 1.8.9
+4. Presiona **RIGHT SHIFT** en el juego para abrir el ClickGUI
+5. Haz click en los módulos para activar/desactivar, expande para ver settings
+6. Click derecho en un módulo para asignar un keybind
 
 ---
 
-## Building Requirements
+## Controles
 
-- **JDK 8** (Adoptium/Temurin recommended)
+| Tecla | Acción |
+|-------|--------|
+| RIGHT SHIFT | Abrir/Cerrar ClickGUI |
+| Click derecho en módulo | Asignar keybind |
+| Rueda del mouse | Scroll en la lista de módulos |
+| ESC | Cerrar GUI |
+
+---
+
+## Requisitos para Compilar
+
+- **JDK 8** (se recomienda Adoptium/Temurin)
 - **Windows** (ForgeGradle 2.1 + Gradle 2.14)
 
 ---
 
-## License
+## Licencia
 
-This project is open source. Use it, modify it, learn from it.
+Este proyecto es open source. Úsalo, modifícalo, aprende de él.
 
 ---
 
-## Disclaimer
+## Aviso
 
-This mod is intended for use on private servers where you have explicit permission to test. Use responsibly.
+Este mod está pensado para uso en servidores privados donde tengas permiso explícito para hacer pruebas. Úsalo con responsabilidad.
