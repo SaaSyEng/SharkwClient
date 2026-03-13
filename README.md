@@ -1,140 +1,136 @@
 # SharkwClient
 
+**Open-source Minecraft 1.8.9 Forge mod** for PvP enhancement and server security auditing.
+
 **Mod open-source de Minecraft 1.8.9 Forge** para mejora de PvP y auditoría de seguridad en servidores.
 
-SharkwClient es un cliente con muchas funciones construido sobre Forge + SpongeMixin, diseñado para testear sistemas anticheat en servidores privados. Incluye 38 módulos configurables en las categorías de combate, movimiento, visual y utilidades.
+SharkwClient is a feature-rich client mod built on Forge + SpongeMixin, with 38 configurable modules across combat, movement, visual, and utility categories.
+
+SharkwClient es un cliente con muchas funciones construido sobre Forge + SpongeMixin, con 38 módulos configurables en las categorías de combate, movimiento, visual y utilidades.
 
 ---
 
-## Características
+## Features / Características
 
-### Combate (10 módulos)
-| Módulo | Descripción |
-|--------|-------------|
-| KillAura | Aura silenciosa con rotaciones suaves y GCD fix |
-| AimAssist | Corrección de apuntado suave e independiente del framerate |
-| AutoClicker | Autoclicker con distribución gaussiana de CPS |
-| Criticals | Críticos por packet en cada golpe |
-| Velocity | Cancela o reduce el knockback (a nivel de packet) |
-| Reach | Alcance de ataque extendido con raycasting |
-| WTap | Reset de sprint automático para máximo knockback |
-| Strafe | Automatización de strafe en combate |
-| AutoArmor | Equipado automático de la mejor armadura |
-| Backtrack | Posiciones retrasadas de entidades para más ventana de hit |
+### Combat / Combate (10)
+| Module | Description / Descripción |
+|--------|--------------------------|
+| KillAura | Silent aura with smooth rotations and GCD fix / Aura silenciosa con rotaciones suaves y GCD fix |
+| AimAssist | Frame-independent smooth aim correction / Corrección de apuntado suave e independiente del framerate |
+| AutoClicker | Gaussian-distributed CPS autoclicker / Autoclicker con distribución gaussiana de CPS |
+| Criticals | Packet criticals on every hit / Críticos por packet en cada golpe |
+| Velocity | Cancel or reduce knockback (packet-level) / Cancela o reduce el knockback (a nivel de packet) |
+| Reach | Extended attack range with raycasting / Alcance de ataque extendido con raycasting |
+| WTap | Automatic sprint reset for max knockback / Reset de sprint automático para máximo knockback |
+| Strafe | Combat strafing automation / Automatización de strafe en combate |
+| AutoArmor | Automatic best armor equipping / Equipado automático de la mejor armadura |
+| Backtrack | Delayed entity positions for extended hit window / Posiciones retrasadas para más ventana de hit |
 
-### Movimiento (11 módulos)
-| Módulo | Descripción |
-|--------|-------------|
-| Speed | Modos Sprint / SlowHop / GroundStrafe |
-| Fly | Modos Vanilla y Glide con anti-kick |
-| Sprint | Auto-sprint con opción omnidireccional |
-| Scaffold | Auto bridge con rotaciones silenciosas |
-| NoFall | Prevención de daño por caída |
-| Bhop | Bunny hop con boost de velocidad |
-| Jesus | Caminar sobre el agua |
-| NoSlow | Cancela la ralentización por uso de items |
-| Step | Subir bloques sin saltar |
-| Phase | Noclip a través de bloques |
-| AirJump | Saltos múltiples en el aire |
+### Movement / Movimiento (11)
+| Module | Description / Descripción |
+|--------|--------------------------|
+| Speed | Sprint / SlowHop / GroundStrafe modes / Modos Sprint / SlowHop / GroundStrafe |
+| Fly | Vanilla and Glide modes with anti-kick / Modos Vanilla y Glide con anti-kick |
+| Sprint | Auto-sprint with omni-directional option / Auto-sprint con opción omnidireccional |
+| Scaffold | Auto bridge with silent rotations / Auto bridge con rotaciones silenciosas |
+| NoFall | Fall damage prevention / Prevención de daño por caída |
+| Bhop | Bunny hop with speed boost / Bunny hop con boost de velocidad |
+| Jesus | Walk on water / Caminar sobre el agua |
+| NoSlow | Cancel item use slowdown / Cancela la ralentización por uso de items |
+| Step | Step up blocks without jumping / Subir bloques sin saltar |
+| Phase | Noclip through blocks / Noclip a través de bloques |
+| AirJump | Multiple jumps in the air / Saltos múltiples en el aire |
 
-### Visual (7 módulos)
-| Módulo | Descripción |
-|--------|-------------|
-| ESP | Cajas de jugadores/mobs a través de paredes |
-| Tracers | Líneas hacia entidades |
-| Fullbright | Visibilidad máxima |
-| XRay | Ver minerales a través de bloques |
-| TargetHUD | Muestra la vida del objetivo |
-| KeyStrokes | Visualización de inputs con CPS |
-| HUD | Lista de módulos, watermark, info |
+### Visual (7)
+| Module | Description / Descripción |
+|--------|--------------------------|
+| ESP | Player/mob boxes through walls / Cajas de jugadores/mobs a través de paredes |
+| Tracers | Lines to entities / Líneas hacia entidades |
+| Fullbright | Maximum visibility / Visibilidad máxima |
+| XRay | See ores through blocks / Ver minerales a través de bloques |
+| TargetHUD | Target health display / Muestra la vida del objetivo |
+| KeyStrokes | Input display with CPS / Visualización de inputs con CPS |
+| HUD | Module list, watermark, info / Lista de módulos, watermark, info |
 
-### Misc (10 módulos)
-| Módulo | Descripción |
-|--------|-------------|
-| Timer | Modificación de velocidad del juego |
-| Blink | Buffering de packets (intercepción real) |
-| AntiAFK | Anti-inactividad con modos configurables |
-| AutoEat | Comer automáticamente cuando hay hambre |
-| AutoRespawn | Respawn instantáneo al morir |
-| FreeCam | Movimiento libre de cámara |
-| FlagDetector | Monitor de detecciones del anticheat |
-| FastBreak | Romper bloques más rápido |
-| FastPlace | Colocar bloques más rápido |
+### Misc (10)
+| Module | Description / Descripción |
+|--------|--------------------------|
+| Timer | Game speed modification / Modificación de velocidad del juego |
+| Blink | Packet buffering (real interception) / Buffering de packets (intercepción real) |
+| AntiAFK | Anti-idle with configurable modes / Anti-inactividad con modos configurables |
+| AutoEat | Automatic eating when hungry / Comer automáticamente cuando hay hambre |
+| AutoRespawn | Instant respawn on death / Respawn instantáneo al morir |
+| FreeCam | Free camera movement / Movimiento libre de cámara |
+| FlagDetector | Anticheat detection monitor / Monitor de detecciones del anticheat |
+| FastBreak | Faster block breaking / Romper bloques más rápido |
+| FastPlace | Faster block placement / Colocar bloques más rápido |
 
-### Características Técnicas
-- **GCD Fix** — Rotaciones calibradas a la sensibilidad del hardware del mouse
-- **CPS Gaussiano** — Patrones de clicks estadísticamente humanos
-- **Rotaciones Silenciosas** — Rotación server-side vía packets
-- **Inyección Mixin** — Hooks directos en NetworkManager, renderizado de bloques y más
-- **Sistema de Settings Completo** — Cada módulo tiene sliders, toggles y modos configurables
-- **GUI Dark Premium** — ClickGUI fullscreen con toggles animados, sliders y soporte de keybinds
+### Technical Features / Características Técnicas
+- **GCD Fix** — Rotations calibrated to mouse sensitivity / Rotaciones calibradas a la sensibilidad del mouse
+- **Gaussian CPS** — Statistically human click patterns / Patrones de clicks estadísticamente humanos
+- **Silent Rotations** — Server-side rotation via packets / Rotación server-side vía packets
+- **Mixin Injection** — Direct hooks into NetworkManager, Block rendering / Hooks directos en NetworkManager, renderizado de bloques
+- **Full Settings System** — Sliders, toggles, and modes for every module / Sliders, toggles y modos para cada módulo
+- **Premium Dark GUI** — Full-screen ClickGUI with animations and keybind support / ClickGUI fullscreen con animaciones y keybinds
 
 ---
 
-## Descargar e Instalar
+## Download & Install / Descargar e Instalar
 
-### Requisitos
+### Requirements / Requisitos
 - Minecraft 1.8.9
-- [Forge 1.8.9](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.8.9.html) instalado
+- [Forge 1.8.9](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.8.9.html)
 - Java 8
 
-### Opción 1: Descargar el JAR compilado
-1. Ve a la página de [**Releases**](../../releases)
-2. Descarga el último `SharkwClient-1.0.jar`
-3. Ponlo en tu carpeta `.minecraft/mods/`
-4. Abre Minecraft con Forge 1.8.9
-5. Presiona **RIGHT SHIFT** para abrir el GUI
+### Option 1: Download JAR / Descargar JAR
+1. Go to / Ve a [**Releases**](../../releases)
+2. Download / Descarga `SharkwClient-1.0.jar`
+3. Place in / Ponlo en `.minecraft/mods/`
+4. Launch with Forge 1.8.9 / Abre Minecraft con Forge 1.8.9
+5. Press / Presiona **RIGHT SHIFT** to open GUI / para abrir el GUI
 
-### Opción 2: Compilar desde el código fuente
+### Option 2: Build from Source / Compilar desde el código
 ```bash
-# Clonar el repositorio
 git clone https://github.com/SaaSyEng/SharkwClient.git
 cd SharkwClient
 
-# Configurar workspace (solo la primera vez, ~15 min)
-# Windows:
+# First time setup / Primera vez (~15 min)
 gradlew.bat setupDecompWorkspace
 
-# Compilar
+# Build / Compilar
 gradlew.bat build
 ```
 
-El JAR compilado estará en `build/libs/SharkwClient-1.0.jar`. Cópialo a tu carpeta `.minecraft/mods/`.
-
-### Inicio Rápido
-1. Instala Forge 1.8.9 en tu launcher de Minecraft
-2. Mete el JAR en `.minecraft/mods/`
-3. Abre Minecraft con Forge 1.8.9
-4. Presiona **RIGHT SHIFT** en el juego para abrir el ClickGUI
-5. Haz click en los módulos para activar/desactivar, expande para ver settings
-6. Click derecho en un módulo para asignar un keybind
+JAR output: `build/libs/SharkwClient-1.0.jar` → copy to / copiar a `.minecraft/mods/`
 
 ---
 
-## Controles
+## Controls / Controles
 
-| Tecla | Acción |
-|-------|--------|
-| RIGHT SHIFT | Abrir/Cerrar ClickGUI |
-| Click derecho en módulo | Asignar keybind |
-| Rueda del mouse | Scroll en la lista de módulos |
-| ESC | Cerrar GUI |
+| Key / Tecla | Action / Acción |
+|-------------|-----------------|
+| RIGHT SHIFT | Open/Close ClickGUI / Abrir/Cerrar ClickGUI |
+| Right-click module / Click derecho | Set keybind / Asignar keybind |
+| Mouse wheel / Rueda del mouse | Scroll module list / Scroll en la lista |
+| ESC | Close GUI / Cerrar GUI |
 
 ---
 
-## Requisitos para Compilar
+## Build Requirements / Requisitos para Compilar
 
-- **JDK 8** (se recomienda Adoptium/Temurin)
+- **JDK 8** (Adoptium/Temurin)
 - **Windows** (ForgeGradle 2.1 + Gradle 2.14)
 
 ---
 
-## Licencia
+## License / Licencia
 
-Este proyecto es open source. Úsalo, modifícalo, aprende de él.
+Open source. Use it, modify it, learn from it. / Úsalo, modifícalo, aprende de él.
 
 ---
 
-## Aviso
+## Disclaimer / Aviso
 
-Este mod está pensado para uso en servidores privados donde tengas permiso explícito para hacer pruebas. Úsalo con responsabilidad.
+This mod is intended for private servers with explicit permission. Use responsibly.
+
+Este mod está pensado para servidores privados con permiso explícito. Úsalo con responsabilidad.
