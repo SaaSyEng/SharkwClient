@@ -1,0 +1,15 @@
+[
+  {
+    "modid": "sharkevclient",
+    "name": "SharkevClient",
+    "description": "Security testing mod menu for Minecraft 1.8.9",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "authorList": ["sharkev"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

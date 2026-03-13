@@ -1,0 +1,78 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url = "https://maven.minecraftforge.net" }
+        maven { url = "https://repo.spongepowered.org/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+        classpath 'org.spongepowered:mixingradle:0.4-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'org.spongepowered.mixin'
+
+version      = "1.0"
+group        = "com.sharkev.client"
+archivesBaseName = "SharkevClient"
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+minecraft {
+    version = "1.8.9-11.15.1.2318-1.8.9"
+    runDir  = "run"
+    mappings = "stable_22"
+
+    // Inject tweaker so Mixin loads before Forge
+    clientJvmArgs  += "-Dfml.coreMods.load=com.sharkev.client.tweaker.SharkevCoreMod"
+    serverJvmArgs  += "-Dfml.coreMods.load=com.sharkev.client.tweaker.SharkevCoreMod"
+}
+
+mixin {
+    add sourceSets.main, "mixins.sharkevclient.refmap.json"
+}
+
+repositories {
+    maven { url = "https://repo.spongepowered.org/maven" }
+}
+
+dependencies {
+    compile('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+        exclude module: 'log4j-core'
+    }
+}
+
+processResources {
+    inputs.property "version",   project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+    from(sourceSets.main.resources.srcDirs) { exclude 'mcmod.info' }
+}
+
+jar {
+    manifest {
+        attributes(
+            'TweakClass'    : 'org.spongepowered.asm.launch.MixinTweaker',
+            'TweakOrder'    : '0',
+            'MixinConfigs'  : 'mixins.sharkevclient.json',
+            'FMLCorePlugin' : 'com.sharkev.client.tweaker.SharkevCoreMod',
+            'FMLCorePluginContainsFMLMod': 'true'
+        )
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
