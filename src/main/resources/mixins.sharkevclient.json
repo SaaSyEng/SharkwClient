@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.7.11",
+  "package": "com.sharkev.client.mixin",
+  "refmap": "mixins.sharkevclient.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+    "MixinNetworkManager",
+    "MixinEntityPlayerSP",
+    "MixinEntityRenderer",
+    "MixinMinecraft",
+    "MixinBlock"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
